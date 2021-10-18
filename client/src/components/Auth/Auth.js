@@ -70,8 +70,8 @@ const Auth = () => {
     }
 
     return (
-        <Container component="main" maxWidth="xs">
-            <Paper className={classes.paper} elevation={3}>
+        <Container component="main" maxWidth="xs" >
+            <Paper className={classes.paper}  elevation={3}>
                 <Avatar className={classes.avatar}>
                     <LockOutLinedIcon />
                 </Avatar>

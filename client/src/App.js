@@ -2,13 +2,13 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import {Container} from '@material-ui/core'
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Container maxWidth="lg">
+    <Container maxWidth="xxl">
     <Navbar />
     <Switch>
       <Route path='/' exact component={Home} />

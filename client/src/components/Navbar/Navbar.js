@@ -43,23 +43,31 @@ const Navbar = () => {
         <AppBar position="static" color="inherit"   >
             <Toolbar className={classes.navBox}>
                 <Container className={classes.leftNav} >
-                    <MenuList style={{color: 'black'  }} className={classes.Item} />
-                <Avatar > <img src={logo} height="40"  /> </Avatar>
+                    <MenuList className={classes.menuButton} />
+                <Avatar > <img src={logo} height="40"   /> </Avatar>
                 <Typography variant="h5" style={{textDecoration: "none", color: "black"}} component={Link} to='/' className={classes.Item} > Memories </Typography>
                 </Container>
                 <Container className={classes.rightNav}>
-                    <Container  >  
+                    {/* <Container  >  
                 {user ? (
                     <div className={classes.profile}>
-                    <Avatar className={classes.user} alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}></Avatar> 
+                    <Avatar className={classes.user} alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar> 
                     <Typography variant="h6" className={classes.user} >{user.result.name}</Typography>
                     <Button variant="contained" className={classes.user} className={classes.logout} color="secondary" onClick={logout}> Logout </Button>
                     </div>
                 ) : (
                     <Button component={Link} to='/auth' variant="contained" color="primary">Sign In </Button>
                 ) }
-                </Container>
-
+                </Container> */}
+                {user ? (
+                    <div className={classes.profile}>
+                    <Avatar className={classes.user} className={classes.avatar} alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar> 
+                    <Typography variant="h6" className={classes.user}  >{user.result.name}</Typography>
+                    <Button variant="contained" className={classes.user} className={classes.logout} color="secondary" onClick={logout}> Logout </Button>
+                    </div>
+                ) : (
+                    <Button component={Link} to='/auth' variant="contained" color="primary">Sign In </Button>
+                ) }
                     <AccountCircleIcon className={classes.item} />
                     <SearchIcon className={classes.item} />
                     <FavoriteBorderIcon className={classes.item} />

@@ -1,9 +1,15 @@
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
     navBox: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    menuButton: {
+        margin: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            display: 'none'
+        }
     },
     leftNav: {
         display: 'flex',
@@ -13,10 +19,6 @@ export default makeStyles((theme) => ({
         display: "flex",
         justifyContent: 'flex-end',
         alignItems: 'center',
-    },
-    Item: {
-        padding: '10px',
-        cursor: 'pointer'
     },
     item: {
         padding: "7px",
@@ -30,9 +32,19 @@ export default makeStyles((theme) => ({
     },
     profile: {
         display: 'flex',
-        paddingRight: '150px' 
+        paddingRight: '20px', 
+        alignItems: 'center',
     },
     user: {
         padding: "20px"
-    }
+    },
+    avatar: {
+        borderRadius: "20px",
+    },
+    [theme.breakpoints.down('sm')]: {
+        item: {
+            display: 'none'
+        },
+},
+   
 }))
