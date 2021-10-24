@@ -13,6 +13,10 @@ app.use(express.urlencoded({limit: "30mb", extended: true }))
 app.use('/posts', postRoutes)
 app.use('/users', userRoutes)
 
+app.get('/', (req, res) => {
+    res.send('Hello to socialmerno')
+})
+
 const CONNECTION_URL = 'mongodb+srv://tenzinngodupjs:tenzinngodupjs95@cluster0.euh61.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000
 mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})

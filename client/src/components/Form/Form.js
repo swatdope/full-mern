@@ -47,7 +47,7 @@ const clear = () => {
 
     return (
        <Paper className={classes.paper} >
-       <form className={`${classes.root} ${classes.form}`} autoComplete="off" noValidate onSubmit={handleSubmit}  >
+       <form className={`${classes.root} ${classes.form}`} autoComplete="off" noValidate onSubmit={handleSubmit} elevation={12}  >
        <Typography variant="h6" >creating a memory</Typography>
        
        <TextField name="title" variant="outlined" label="Title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })}  />

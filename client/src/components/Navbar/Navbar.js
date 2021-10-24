@@ -43,7 +43,7 @@ const Navbar = () => {
         <AppBar position="static" color="inherit"   >
             <Toolbar className={classes.navBox}>
                 <Container className={classes.leftNav} >
-                    <MenuList className={classes.menuButton} />
+                    {/* <MenuList className={classes.menuButton} /> */}
                 <Avatar > <img src={logo} height="40"   /> </Avatar>
                 <Typography variant="h5" style={{textDecoration: "none", color: "black"}} component={Link} to='/' className={classes.Item} > Memories </Typography>
                 </Container>
@@ -68,11 +68,6 @@ const Navbar = () => {
                 ) : (
                     <Button component={Link} to='/auth' variant="contained" color="primary">Sign In </Button>
                 ) }
-                    <AccountCircleIcon className={classes.item} />
-                    <SearchIcon className={classes.item} />
-                    <FavoriteBorderIcon className={classes.item} />
-                    <LocalMallIcon className={classes.item} />
-                  
                 </Container>
             </Toolbar>
         </AppBar>

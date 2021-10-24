@@ -4,13 +4,16 @@ export default makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        [theme.breakpoints.down('xs')]: {
+                    flexWrap: 'wrap',
+                },
     },
-    menuButton: {
-        margin: theme.spacing(2),
-        [theme.breakpoints.up('sm')]: {
-            display: 'none'
-        }
-    },
+    // menuButton: {
+    //     margin: theme.spacing(2),
+    //     [theme.breakpoints.up('sm')]: {
+    //         display: 'none'
+    //     }
+    // },
     leftNav: {
         display: 'flex',
         alignItems: 'center',
@@ -19,10 +22,6 @@ export default makeStyles((theme) => ({
         display: "flex",
         justifyContent: 'flex-end',
         alignItems: 'center',
-    },
-    item: {
-        padding: "7px",
-        cursor: 'pointer'
     },
     user: {
         display: 'flex',
@@ -41,10 +40,6 @@ export default makeStyles((theme) => ({
     avatar: {
         borderRadius: "20px",
     },
-    [theme.breakpoints.down('sm')]: {
-        item: {
-            display: 'none'
-        },
-},
+
    
 }))
